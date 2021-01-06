@@ -2,42 +2,126 @@
   <div class="home">
     <div class="head">
       <div class="container">
-        <div class="top-nav">
-          <div class="top-logo">
-            三务公开便民服务平台
+        <div class="top-nav flex justify-between align-center">
+          <div class="top-logo flex align-center">
+            <img class="logo-icon" src="@/assets/images/logo.png" alt="">
+            <div class="font-color-FFFFFF">
+              <div class="font-size24">三务公开便民服务平台</div>
+              <div class="font-size14">三务公开，快捷了解</div>
+            </div>
           </div>
           <div class="top-ul">
-            <ul>
+            <ul class="nav-link flex justify-between font-color-FFFFFF">
               <li><a href="#">首页</a></li>
-              <li><a href="#">首页</a></li>
-              <li><a href="#">首页</a></li>
-              <li><a href="#">首页</a></li>
-              <li><a href="#">首页</a></li>
-              <li><a href="#">首页</a></li>
+              <li><a href="#">党务公开</a></li>
+              <li><a href="#">政务公开</a></li>
+              <li><a href="#">财务公开</a></li>
+              <li><a href="#">办事指南</a></li>
+              <li><a href="#">我要投诉</a></li>
             </ul>
           </div>
+          <div class="icon-wrapp flex justify-between align-center">
+            <img class="icon20" src="@/assets/images/sign.png" alt="">
+            <img class="icon20" src="@/assets/images/search.png" alt="">
+            <img class="icon20" src="@/assets/images/phone.png" alt="">
+          </div>
+
         </div>
-        <div class="search-input"></div>
+
+        <div class="search-wrapp">
+          <div class="input-search ">
+            <div class="flex align-center justify-between">
+              <input placeholder="请输入你想查询的内容" class="font-color-949494 font-size18" type="text">
+              <div class="font-size20 search-btn flex font-size20 align-center justify-between">
+                搜索
+                <img src="@/assets/images/arrow-right.png" alt="">
+              </div>
+            </div>
+            <div class="late flex">
+              <span class="font-size16 font-color-000000" style="margin-right:20px;">最近搜索</span>
+              <ul class="flex">
+                <li><a href="#">个税</a></li>
+                <li><a href="#">融资</a></li>
+                <li><a href="#">社保</a></li>
+                <li><a href="#">政策</a></li>
+                <li><a href="#">生育</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container" style="margin-top:160px;">
       <!-- 最新公告 -->
       <div class="content-box">
-        <div class="content-title">最新公告</div>
-        <div>The latest announcemen</div>
-        <div>
-          <div class=""></div>
-          <div>闵行区召开区委党的建设工作领导小组专题会议</div>
-          <div>组织部 2020-10-17</div>
-          <div>11月10日上午，闵行区召开区委党的建设工作领导小组专题会议。
-            区委书记、区委党的建设工作领导小组组长倪耀明主持会议并讲话。区委副书记、组织部部长王观…宝，区委常委、纪委书记、监察委主任李忠兴，区委常委、宣传部部长胡明华等区委党的建设工作领导小组副组长以及成员出席会议。
-            会议指出，2020年全区党的建设工作始终把政治建设摆在首位，坚决扛起了管党治党的政治责任，助推了重点任务，服务了中心大局，进一步筑牢了各级党组织和广大党员干部的思想之基，发挥了各级党组织的战斗堡垒作用和广大党员干部的先锋模范作用，推进了全面从严治党向纵深发展。
-            会议强调，要一以贯之把党的政治建设摆在首位，坚决抓好巡视整改，深入推进“四史”学习教育，全面加强思想政治建设；要一以贯之强化党建引领，始终围绕中心大局，提升党建工作实效，贯彻好新时代党的组织路线，持续提升组织力；要一以贯之推动全面从严治党向纵深发展，进一步落实全面从严治党主体责任，深化细化“四责协同”机制，以钉钉子精神打好作风建设持久战。
-            会议要求，要进一步落实习近平总书记对上海重要指示精神，按照中央、市委全面从严治党的工作要求，以政治建设为统领，以巡视整改为契机，不折不扣抓好各项工作任务落地见效，不断加强党建工作合力，助力“十三五”圆满收官，为顺利开启“十四五”发展新阶段奠定扎实基础。
-            会议审议通过《中共闵行区委党的建设工作领导小组办公室履行抓全面从严治党职责的工作规则》，研究讨论《关于聚焦闵行南虹桥推进枢纽党建，助力打造虹桥国际开放枢纽的实施意见》。
+        <div class="content-title text-align-center font-size30 font-color-000000 line-height30">最新公告</div>
+        <div class="opacity06 text-align-center font-color-000000 mt20 line-height19 mb40">The latest announcemen</div>
+        <div class="flex justify-between">
+          <div class="pb20 left box-shadow" style="width:780px;">
+            <img class="h438 w100" src="@/assets/images/p4.png" alt="">
+            <div class="pd-lr30 border-box">
+              <div class="line-height70 font-size26 font-color-1B1B1B">闵行区召开区委党的建设工作领导小组专题会议</div>
+              <div class="font-size16 font-color-949494 line-height16">组织部 2020-10-17</div>
+              <div class=" mt15 info font-size16 font-color-949494 line-height27">
+                11月10日上午，闵行区召开区委党的建设工作领导小组专题会议。
+                区委书记、区委党的建设工作领导小组组长倪耀明主持会议并讲话。区委副书记、组织部部长王宝，区委常委、纪委书记、监察委主任李忠兴，区委常委、宣传部部长胡明华等区委党的建设工作领导小组副组长以及成员出席会议。
+                会议指出，2020年全区党的建设工作始终把政治建设摆在首位，坚决扛起了管党治党的政治责任，助推了重点任务，服务了中心大局，进一步筑牢了各级党组织和广大党员干部的思想之基，发挥了各级党组织的战斗堡垒作用和广大党员干部的先锋模范作用，推进了全面从严治党向纵深发展。
+                会议强调，要一以贯之把党的政治建设摆在首位，坚决抓好巡视整改，深入推进“四史”学习教育，全面加强思想政治建设；要一以贯之强化党建引领，始终围绕中心大局，提升党建工作实效，贯彻好新时代党的组织路线，持续提升组织力；要一以贯之推动全面从严治党向纵深发展，进一步落实全面从严治党主体责任，深化细化“四责协同”机制，以钉钉子精神打好作风建设持久战。
+                会议要求，要进一步落实习近平总书记对上海重要指示精神，按照中央、市委全面从严治党的工作要求，以政治建设为统领，以巡视整改为契机，不折不扣抓好各项工作任务落地见效，不断加强党建工作合力，助力“十三五”圆满收官，为顺利开启“十四五”发展新阶段奠定扎实基础。
+                会议审议通过《中共闵行区委党的建设工作领导小组办公室履行抓全面从严治党职责的工作规则》，研究讨论《关于聚焦闵行南虹桥推进枢纽党建，助力打造虹桥国际开放枢纽的实施意见》。
+              </div>
+            </div>
+
+          </div>
+          <div class="right border-box pd30 box-shadow">
+            <div class="flex justify-between mb30 align-center">
+              <div class="font-color-000000 font-size24 ">公告栏</div>
+              <div class="font-size16 font-color-949494 ">更多>></div>
+            </div>
+            <div>
+              <div class="item">
+                <div class="font-color-000000 mb15 font-size16 " style="font-weight: 500;">市委第四巡视组向闵行区反馈巡视情况
+                </div>
+                <div class=" font-color-949494">近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…</div>
+                <div class="flex justify-between line-height27 font-color-949494 font-size14">
+                  <div>组织部</div>
+                  <div>2020-10-17</div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div>市委第四巡视组向闵行区反馈巡视情况</div>
+                <div>近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…</div>
+                <div>
+                  <div>组织部</div>
+                  <div>2020-10-17</div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div>市委第四巡视组向闵行区反馈巡视情况</div>
+                <div>近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…</div>
+                <div>
+                  <div>组织部</div>
+                  <div>2020-10-17</div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div>市委第四巡视组向闵行区反馈巡视情况</div>
+                <div>近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…</div>
+                <div>
+                  <div>组织部</div>
+                  <div>2020-10-17</div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
+
       <!-- 快捷功能 -->
       <div class="content-box">
         <div class="content-title">快捷功能</div>
@@ -203,9 +287,14 @@
 <script>
 
 
-export default {
-  name: 'Home',
-  components: {
+  export default {
+    name: 'Home',
+    components: {
+    }
   }
-}
 </script>
+<style lang="scss">
+  .right {
+    width: 390px;
+  }
+</style>
