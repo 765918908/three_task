@@ -1,0 +1,164 @@
+<template>
+  <div class="home">
+    <div class="head">
+      <div class="container">
+
+        <Head :currentIndex="3" />
+
+      </div>
+    </div>
+    <div class="container mt30">
+      <div class="font-size16 mb43">当前位置：中国</div>
+      <div class="notice flex justify-between">
+        <div v-for="(item,index) in 3"
+             :key="index"
+             class="notice-item  box-shadow border-box pd-20-30">
+          <div class="flex justify-between align-center mb15">
+            <div class="font-size24">公告栏</div>
+            <div class="font-color-949494 font-size16 pointer">更多>></div>
+          </div>
+          <div class="ul-box">
+            <div class="item"
+                 v-for="(item,index) in 5"
+                 :key="index">
+              <div class="item-title">市委第四巡视组向闵行区反馈巡视情况</div>
+              <div class="item-info">
+                <div>组织部</div>
+                <div>2020-10-17</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt80">
+      <div class="flex box-shadow">
+        <div class="left w440 pd-43-60 border-box">
+          <div class="red-title mb30">公开指标</div>
+          <div v-for="(item,index) in 4"
+               :key="index"
+               class="item mb50 font-color-1B1B1B">
+            党组织任期工作目标、阶段性工作部署、重点
+            工作任务及落实情况
+          </div>
+        </div>
+        <div class="right w760 border-box pd-43-60 ">
+          <div class="red-title mb30">工作机构</div>
+          <div>
+            <div class="ul-box"
+                 style="padding-right:58px;">
+              <div class="item"
+                   v-for="(item,index) in 5"
+                   :key="index">
+                <div class="item-title">市委第四巡视组向闵行区反馈巡视情况</div>
+                <div class="item-content">
+                  近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…
+                  近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…
+                </div>
+                <div class="item-info">
+                  <div>组织部</div>
+                  <div>2020-10-17</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page">
+            <div class="page-more">
+              <img src="@/assets/images/before_page.png"
+                   alt="">
+            </div>
+
+            <div class="page-box">
+              <div class="page-item active">1</div>
+              <div class="page-item">2</div>
+              <div class="page-item">3</div>
+              <div class="page-item">4</div>
+            </div>
+
+            <div class="page-more">
+              <img src="@/assets/images/next_page.png"
+                   alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt80">
+      <div class="flex box-shadow">
+        <div class="left w440 pd-43-60 border-box">
+          <div class="red-title mb30">公开指标</div>
+          <div v-for="(item,index) in 4"
+               :key="index"
+               class="item mb50 font-color-1B1B1B">
+            党组织任期工作目标、阶段性工作部署、重点
+            工作任务及落实情况
+          </div>
+        </div>
+        <div class="right w760 border-box pd-43-60 ">
+          <div class="red-title mb30">工作机构</div>
+          <div>
+            <div class="ul-box"
+                 style="padding-right:58px;">
+              <div class="item"
+                   v-for="(item,index) in 5"
+                   :key="index">
+                <div class="item-title">市委第四巡视组向闵行区反馈巡视情况</div>
+                <div class="item-content">
+                  近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…
+                  近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…
+                </div>
+                <div class="item-info">
+                  <div>组织部</div>
+                  <div>2020-10-17</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page">
+            <div class="page-more">
+              <img src="@/assets/images/before_page.png"
+                   alt="">
+            </div>
+
+            <div class="page-box">
+              <div class="page-item active">1</div>
+              <div class="page-item">2</div>
+              <div class="page-item">3</div>
+              <div class="page-item">4</div>
+            </div>
+
+            <div class="page-more">
+              <img src="@/assets/images/next_page.png"
+                   alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <Foot />
+
+  </div>
+</template>
+
+<script>
+
+import Head from "../components/common/Head/Head"
+import Foot from "../components/common/Foot/Foot"
+export default {
+  name: 'Home',
+  components: {
+    Head,
+    Foot
+  }
+}
+</script>
+
+<style lang="scss">
+.notice-item {
+  width: 370px;
+}
+</style>

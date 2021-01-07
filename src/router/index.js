@@ -8,10 +8,26 @@ const routes = [
     path: '/',
     name: 'Home',
     component: () => import('../views/Home.vue')
+  },
+  {
+    path: '/OpenGov',
+    name: 'OpenGov',
+    component: () => import('../views/OpenGov.vue')
+  },
+  {
+    path: '/OpenAffairs',
+    name: 'OpenAffairs',
+    component: () => import('../views/OpenAffairs.vue')
+  },
+  {
+    path: '/OpenFinan',
+    name: 'OpenFinan',
+    component: () => import('../views/OpenFinan.vue')
   }
 ]
 
 const router = new VueRouter({
+  mode: "history",
   routes
 })
 

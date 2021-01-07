@@ -2,43 +2,24 @@
   <div class="home">
     <div class="head">
       <div class="container">
-        <div class="top-nav flex justify-between align-center">
-          <div class="top-logo flex align-center">
-            <img class="logo-icon" src="@/assets/images/logo.png" alt="">
-            <div class="font-color-FFFFFF">
-              <div class="font-size24">三务公开便民服务平台</div>
-              <div class="font-size14">三务公开，快捷了解</div>
-            </div>
-          </div>
-          <div class="top-ul">
-            <ul class="nav-link flex justify-between font-color-FFFFFF">
-              <li><a href="#">首页</a></li>
-              <li><a href="#">党务公开</a></li>
-              <li><a href="#">政务公开</a></li>
-              <li><a href="#">财务公开</a></li>
-              <li><a href="#">办事指南</a></li>
-              <li><a href="#">我要投诉</a></li>
-            </ul>
-          </div>
-          <div class="icon-wrapp flex justify-between align-center">
-            <img class="icon20" src="@/assets/images/sign.png" alt="">
-            <img class="icon20" src="@/assets/images/search.png" alt="">
-            <img class="icon20" src="@/assets/images/phone.png" alt="">
-          </div>
 
-        </div>
+        <Head :currentIndex="0" />
 
         <div class="search-wrapp">
           <div class="input-search ">
             <div class="flex align-center justify-between">
-              <input placeholder="请输入你想查询的内容" class="font-color-949494 font-size18" type="text">
+              <input placeholder="请输入你想查询的内容"
+                     class="font-color-949494 font-size18"
+                     type="text">
               <div class="font-size20 search-btn flex font-size20 align-center justify-between">
                 搜索
-                <img src="@/assets/images/arrow-right.png" alt="">
+                <img src="@/assets/images/arrow-right.png"
+                     alt="">
               </div>
             </div>
             <div class="late flex">
-              <span class="font-size16 font-color-000000" style="margin-right:20px;">最近搜索</span>
+              <span class="font-size16 font-color-000000"
+                    style="margin-right:20px;">最近搜索</span>
               <ul class="flex">
                 <li><a href="#">个税</a></li>
                 <li><a href="#">融资</a></li>
@@ -52,14 +33,18 @@
         </div>
       </div>
     </div>
-    <div class="container" style="margin-top:160px;">
+    <div class="container"
+         style="margin-top:160px;">
       <!-- 最新公告 -->
       <div class="content-box">
         <div class="content-title text-align-center font-size30 font-color-000000 line-height30">最新公告</div>
         <div class="opacity06 text-align-center font-color-000000 mt20 line-height19 mb40">The latest announcemen</div>
         <div class="flex justify-between">
-          <div class="pb20 left box-shadow" style="width:780px;">
-            <img class="h438 w100" src="@/assets/images/p4.png" alt="">
+          <div class="pb20 left box-shadow"
+               style="width:780px;">
+            <img class="h438 w100"
+                 src="@/assets/images/p4.png"
+                 alt="">
             <div class="pd-lr30 border-box">
               <div class="line-height70 font-size26 font-color-1B1B1B">闵行区召开区委党的建设工作领导小组专题会议</div>
               <div class="font-size16 font-color-949494 line-height16">组织部 2020-10-17</div>
@@ -74,44 +59,52 @@
             </div>
 
           </div>
-          <div class="right border-box pd30 box-shadow">
-            <div class="flex justify-between mb30 align-center">
+          <div class="right border-box pd30 box-shadow"
+               style="width:390px;">
+            <div class="flex justify-between mb15 align-center">
               <div class="font-color-000000 font-size24 ">公告栏</div>
-              <div class="font-size16 font-color-949494 ">更多>></div>
+              <div class="font-size16 font-color-949494 pointer">更多>></div>
             </div>
             <div>
-              <div class="item">
-                <div class="font-color-000000 mb15 font-size16 " style="font-weight: 500;">市委第四巡视组向闵行区反馈巡视情况
+              <div class="item pdt15b20 border-bottom">
+                <div class="font-color-000000 mb15 font-size16 "
+                     style="font-weight: 500;">市委第四巡视组向闵行区反馈巡视情况
                 </div>
-                <div class=" font-color-949494">近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…</div>
-                <div class="flex justify-between line-height27 font-color-949494 font-size14">
+                <div class=" font-color-949494 mb15">近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…</div>
+                <div class="flex justify-between  font-color-949494 font-size14">
                   <div>组织部</div>
                   <div>2020-10-17</div>
                 </div>
               </div>
 
-              <div class="item">
-                <div>市委第四巡视组向闵行区反馈巡视情况</div>
-                <div>近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…</div>
-                <div>
+              <div class="item pdt15b20 border-bottom">
+                <div class="font-color-000000 mb15 font-size16 "
+                     style="font-weight: 500;">市委第四巡视组向闵行区反馈巡视情况
+                </div>
+                <div class=" font-color-949494 mb15">近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…</div>
+                <div class="flex justify-between  font-color-949494 font-size14">
                   <div>组织部</div>
                   <div>2020-10-17</div>
                 </div>
               </div>
 
-              <div class="item">
-                <div>市委第四巡视组向闵行区反馈巡视情况</div>
-                <div>近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…</div>
-                <div>
+              <div class="item pdt15b20 border-bottom">
+                <div class="font-color-000000 mb15 font-size16 "
+                     style="font-weight: 500;">市委第四巡视组向闵行区反馈巡视情况
+                </div>
+                <div class=" font-color-949494 mb15">近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…</div>
+                <div class="flex justify-between  font-color-949494 font-size14">
                   <div>组织部</div>
                   <div>2020-10-17</div>
                 </div>
               </div>
 
-              <div class="item">
-                <div>市委第四巡视组向闵行区反馈巡视情况</div>
-                <div>近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…</div>
-                <div>
+              <div class="item pdt15b20 border-bottom">
+                <div class="font-color-000000 mb15 font-size16 "
+                     style="font-weight: 500;">市委第四巡视组向闵行区反馈巡视情况
+                </div>
+                <div class=" font-color-949494 mb15">近日，市委第四巡视组向闵行区反馈巡视情况。市委组织部常务副部长、市委巡视工作…</div>
+                <div class="flex justify-between  font-color-949494 font-size14">
                   <div>组织部</div>
                   <div>2020-10-17</div>
                 </div>
@@ -123,43 +116,65 @@
       </div>
 
       <!-- 快捷功能 -->
-      <div class="content-box">
-        <div class="content-title">快捷功能</div>
-        <div>Quick function</div>
+      <div class="content-box mt80">
+        <div class="content-title text-align-center font-size30 font-color-000000 line-height30">快捷功能</div>
+        <div class="opacity06 text-align-center font-color-000000 mt20 line-height19 mb40">Quick function</div>
         <div>
-          <div>
-            <div class="item">
-              <div class="icon"></div>
-              <div>组织结构</div>
-              <div class="icon"></div>
+          <div class="flex justify-between">
+            <div class="item border-box box-shadow w380 h145 align-center flex justify-between pdtb40lr30">
+              <img class="icon65"
+                   src="@/assets/images/organization.png"
+                   alt="">
+              <div class="font-size26 font-color-1B1B1B">组织结构</div>
+              <img class="icon30"
+                   src="@/assets/images/down.png"
+                   alt="">
             </div>
-            <div class="item">
-              <div class="icon"></div>
-              <div>组织结构</div>
-              <div class="icon"></div>
+            <div class="item border-box box-shadow w380 h145 align-center flex justify-between pdtb40lr30">
+              <img class="icon65"
+                   src="@/assets/images/leadership.png"
+                   alt="">
+              <div class="font-size26 font-color-1B1B1B">领导之窗</div>
+              <img class="icon30"
+                   src="@/assets/images/down.png"
+                   alt="">
             </div>
-            <div class="item">
-              <div class="icon"></div>
-              <div>组织结构</div>
-              <div class="icon"></div>
+            <div class="item border-box box-shadow w380 h145 align-center flex justify-between pdtb40lr30">
+              <img class="icon65"
+                   src="@/assets/images/coming.png"
+                   alt="">
+              <div class="font-size26 font-color-1B1B1B">敬请期待</div>
+              <img class="icon30"
+                   src="@/assets/images/down.png"
+                   alt="">
             </div>
           </div>
 
-          <div>
-            <div class="left">
-              <ul>
+          <div class="mt20 box-shadow flex h402">
+            <div class="left w230">
+              <ul class="ul-box  w100">
                 <li>部门</li>
-                <li>部门</li>
-                <li>部门</li>
-                <li>部门</li>
+                <li>区/县</li>
+                <li>管委会</li>
+                <li>其他机构</li>
               </ul>
             </div>
-            <div class="right">
-              <div>
-                <div>佛山市</div>
-                <div class="search-input"></div>
+            <div class="right w970 pdl65 border-box pdb50 pdt20 pdr30">
+              <div class="flex justify-between mb27">
+                <div class="flex h40 align-center align-center">
+                  <img class="icon20 mr5"
+                       src="@/assets/images/sign.png"
+                       alt="">
+                  <div class="font-size18">佛山市</div>
+                </div>
+                <div class="search-input flex">
+                  <input type="text"
+                         placeholder="例如：xx部门">
+                  <div class="search-btn">查找</div>
+                </div>
               </div>
-              <div>
+
+              <div class="flex justify-between">
                 <div class="item">
                   <ul>
                     <li>市发展改革委</li>
@@ -245,56 +260,89 @@
       </div>
 
       <!-- 专题焦点 -->
-      <div class="content-box">
-        <div class="content-title">专题焦点</div>
-        <div>Special focus</div>
-        <div>
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
-          <div class="item"></div>
+      <div class="content-box mt80">
+        <div class="content-title text-align-center font-size30 font-color-000000 line-height30">专题焦点</div>
+        <div class="opacity06 text-align-center font-color-000000 mt20 line-height19 mb40">Special focus</div>
+        <div class="focus-picture">
+          <img class="box-shadow"
+               src="@/assets/images/p2.png"
+               alt="">
+          <img class="box-shadow"
+               src="@/assets/images/p1.png"
+               alt="">
+          <img class="box-shadow"
+               src="@/assets/images/p3.png"
+               alt="">
+          <img class="box-shadow"
+               src="@/assets/images/p4.png"
+               alt="">
         </div>
       </div>
-      <div class="content-box">
-        <div class="item">
-          <div>网站信息</div>
-          <div>网站信息</div>
-          <div>网站信息</div>
-          <div>网站信息</div>
-        </div>
-        <div class="item">
-          <div>网站信息</div>
-          <div>网站信息</div>
-          <div>网站信息</div>
-          <div>网站信息</div>
-        </div>
-        <div class="item">
-          <div>网站信息</div>
-          <div>网站信息</div>
-          <div>网站信息</div>
-          <div>网站信息</div>
-        </div>
-      </div>
+
     </div>
-    <div class="foot">
-      <div class="content-box">
-        三务公开便民服务平台
-      </div>
-    </div>
+    <Foot />
+
   </div>
 </template>
 
 <script>
 
-
-  export default {
-    name: 'Home',
-    components: {
-    }
+import Head from "../components/common/Head/Head"
+import Foot from "../components/common/Foot/Foot"
+export default {
+  name: 'Home',
+  components: {
+    Head,
+    Foot
   }
+}
 </script>
+
 <style lang="scss">
-  .right {
-    width: 390px;
+.focus-picture {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    width: 277px;
+    height: 156px;
   }
+}
+
+.search-input {
+  width: 283px;
+  height: 40px;
+  background: #f7f8fa;
+  border-radius: 5px;
+  input {
+    width: 220px;
+    font-size: 14px;
+    color: #949494;
+  }
+
+  .search-btn {
+    width: 62px;
+    height: 40px;
+    background: #e5e5e5;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #1b1b1b;
+  }
+}
+
+.ul-box {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.ul-box li {
+  line-height: 70px;
+  height: 70px;
+  font-size: 18px;
+  color: #1b1b1b;
+  text-align: center;
+}
 </style>
