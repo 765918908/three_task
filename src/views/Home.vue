@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+
     <div class="head">
       <div class="container">
 
@@ -9,9 +10,10 @@
           <div class="input-search ">
             <div class="flex align-center justify-between">
               <input placeholder="请输入你想查询的内容"
-                     class="font-color-949494 font-size18"
+                     class="font-color-949494 font-size18 aa"
                      type="text">
-              <div class="font-size20 search-btn flex font-size20 align-center justify-between">
+              <div @click="show"
+                   class="font-size20 search-btn  flex font-size20 align-center justify-between">
                 搜索
                 <img src="@/assets/images/arrow-right.png"
                      alt="">
@@ -170,7 +172,7 @@
                 <div class="search-input flex">
                   <input type="text"
                          placeholder="例如：xx部门">
-                  <div class="search-btn">查找</div>
+                  <div class="search-buttom">查找</div>
                 </div>
               </div>
 
@@ -287,10 +289,20 @@
 
 <script>
 
-import Head from "../components/common/Head/Head"
-import Foot from "../components/common/Foot/Foot"
+import Head from "@/components/common/Head/Head"
+import Foot from "@/components/common/Foot/Foot"
+
 export default {
   name: 'Home',
+  data () {
+    return {
+    }
+  },
+  methods: {
+
+  },
+  mounted () {
+  },
   components: {
     Head,
     Foot
@@ -299,6 +311,9 @@ export default {
 </script>
 
 <style lang="scss">
+// .aa {
+//   color: $aa;
+// }
 .focus-picture {
   display: flex;
   align-items: center;
@@ -320,16 +335,19 @@ export default {
     color: #949494;
   }
 
-  .search-btn {
+  .search-buttom {
     width: 62px;
     height: 40px;
+    line-height: 40px;
     background: #e5e5e5;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
     font-size: 14px;
+    font-weight: 500;
     color: #1b1b1b;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 15px;
   }
 }
 

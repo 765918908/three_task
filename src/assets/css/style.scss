@@ -1,10 +1,45 @@
 
 /*变量定义*/
+$aa:red;
 
 /*最大宽度*/
 $max-width:1200px;
-/*业务类*/
+$font-size14:14px;
+$font-size16:16px;
+$font-size18:18px;
+$font-size20:20px;
+$font-size24:24px;
+$font-size26:26px;
+$font-size30:30px;
+$font-size38:38px;
+.font-size14{
+  font-size: $font-size14;
+}
+.font-size16{
+  font-size: $font-size16;
+}
+.font-size18{
+  font-size: $font-size18;
+}
+.font-size20{
+  font-size: $font-size20;
+}
+.font-size24{
+  font-size: $font-size24;
+}
+.font-size26{
+  font-size: $font-size26;
+}
+.font-size30{
+  font-size: $font-size30;
+}
+.font-size38{
+  font-size: $font-size38;
+}
+
 @import "./service.scss";
+
+
 
 /*初始化类*/
 @font-face {
@@ -53,7 +88,7 @@ input:focus{ border:none;}
   font-size: 20px;
 }
 .font-size24{
-  font-size: 24px;
+  font-size:$font-size24;
 }
 .font-size26{
   font-size: 26px;
@@ -100,6 +135,9 @@ input:focus{ border:none;}
 .justify-between{
   justify-content: space-between;
 }
+.justify-around{
+  justify-content: space-around;
+}
 .justify-center{
   justify-content:center;
 }
@@ -116,6 +154,14 @@ input:focus{ border:none;}
 .icon65{
   width: 65px;
   height: 65px;
+}
+.icon14{
+  width: 14px;
+  height: 14px;
+}
+.icon24{
+  width: 24px;
+  height: 24px;
 }
 .icon30{
   width: 30px;
@@ -161,6 +207,9 @@ input:focus{ border:none;}
 }
 .mt15{
   margin-top: 15px;
+}
+.mt100{
+  margin-top: 100px;
 }
 .mt30{
   margin-top: 30px;
@@ -232,6 +281,13 @@ input:focus{ border:none;}
 }
 .pd-43-60{
   padding: 43px 60px;
+}
+.pd-tb-60{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.pd-l-43{
+padding-left: 43px;
 }
 .pd-lr30{
   padding-left: 30px;

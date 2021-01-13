@@ -29,10 +29,12 @@
                  :class="currentIndex==3?'active':''">财务公开</div>
           </li>
           <li>
-            <div :class="currentIndex==4?'active':''">办事指南</div>
+            <div @click="goPage('/BusinessGuide')"
+                 :class="currentIndex==4?'active':''">办事指南</div>
           </li>
           <li>
-            <div :class="currentIndex==5?'active':''">我要投诉</div>
+            <div @click="goPage('/Warn')"
+                 :class="currentIndex==5?'active':''">我要投诉</div>
           </li>
         </ul>
       </div>
@@ -56,7 +58,7 @@
 export default {
   methods: {
     goPage (url) {
-      console.log(url)
+      if (this.$router.currentRoute.path == url) return;
       this.$router.push({ path: url });
     }
   },

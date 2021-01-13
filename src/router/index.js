@@ -23,7 +23,18 @@ const routes = [
     path: '/OpenFinan',
     name: 'OpenFinan',
     component: () => import('../views/OpenFinan.vue')
+  },
+  {
+    path: '/BusinessGuide',
+    name: 'BusinessGuide',
+    component: () => import('../views/BusinessGuide.vue')
+  },
+  {
+    path: '/Warn',
+    name: 'Warn',
+    component: () => import('../views/Warn.vue')
   }
+
 ]
 
 const router = new VueRouter({

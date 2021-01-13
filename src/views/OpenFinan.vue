@@ -34,13 +34,15 @@
 
     <div class="container mt80">
       <div class="flex box-shadow">
-        <div class="left w440 pd-43-60 border-box">
+        <div class="left w440 pd-l-43 pd-tb-60 border-box">
           <div class="red-title mb30">公开指标</div>
           <div v-for="(item,index) in 4"
                :key="index"
-               class="item mb50 font-color-1B1B1B">
-            党组织任期工作目标、阶段性工作部署、重点
-            工作任务及落实情况
+               class=" item mb50 font-color-1B1B1B">
+            <div class="active-select-box">
+              党组织任期工作目标、阶段性工作部署、重点
+              工作任务及落实情况
+            </div>
           </div>
         </div>
         <div class="right w760 border-box pd-43-60 ">

@@ -57,6 +57,7 @@ export default {
 <style lang="scss">
 .foot {
   height: 60px;
+  line-height: 60px;
   background: #f0f2f3;
   margin-top: 50px;
   font-size: 14px;
