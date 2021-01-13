@@ -13,27 +13,27 @@
       <div class="top-ul">
         <ul class="nav-link flex justify-between font-color-FFFFFF">
           <li>
-            <div @click="goPage('/')"
+            <div @click="goPage('/','首页')"
                  :class="currentIndex==0?'active':''">首页</div>
           </li>
           <li>
-            <div @click="goPage('/OpenAffairs')"
+            <div @click="goPage('/OpenAffairs','党务公开')"
                  :class="currentIndex==1?'active':''">党务公开</div>
           </li>
           <li>
-            <div @click="goPage('/OpenGov')"
+            <div @click="goPage('/OpenGov','党务公开')"
                  :class="currentIndex==2?'active':''">政务公开</div>
           </li>
           <li>
-            <div @click="goPage('/OpenFinan')"
+            <div @click="goPage('/OpenFinan','财务公开')"
                  :class="currentIndex==3?'active':''">财务公开</div>
           </li>
           <li>
-            <div @click="goPage('/BusinessGuide')"
+            <div @click="goPage('/BusinessGuide','办事指南')"
                  :class="currentIndex==4?'active':''">办事指南</div>
           </li>
           <li>
-            <div @click="goPage('/Warn')"
+            <div @click="goPage('/Warn','我要投诉')"
                  :class="currentIndex==5?'active':''">我要投诉</div>
           </li>
         </ul>
@@ -57,9 +57,9 @@
 <script>
 export default {
   methods: {
-    goPage (url) {
+    goPage (url, name) {
       if (this.$router.currentRoute.path == url) return;
-      this.$router.push({ path: url });
+      this.$router.push({ path: url, query: { name: name } });
     }
   },
   props: {

@@ -156,7 +156,7 @@ export default {
     align-items: center;
     justify-content: center;
 
-    font-size: 24px;
+    font-size: $font-size24;
     font-weight: bold;
     color: #000000;
   }
@@ -183,7 +183,7 @@ export default {
       width: 70px;
     }
     .title {
-      font-size: 18px;
+      font-size: $font-size18;
       font-weight: bold;
       color: #000000;
       margin-top: 40px;
@@ -191,7 +191,7 @@ export default {
     }
     .info {
       width: 162px;
-      font-size: 18px;
+      font-size: $font-size18;
       font-weight: 400;
       color: #949494;
     }
@@ -204,12 +204,12 @@ export default {
   padding: 35px 33px;
   .left {
     .title {
-      font-size: 18px;
+      font-size: $font-size18;
       color: #000000;
       margin-bottom: 20px;
     }
     .date {
-      font-size: 18px;
+      font-size: $font-size18;
       font-weight: 400;
       color: #949494;
     }
@@ -221,7 +221,7 @@ export default {
       background: #f3f3f3;
       border-radius: 10px;
 
-      font-size: 18px;
+      font-size: $font-size18;
       font-weight: 400;
       color: #000000;
       padding: 15px 10px;
@@ -234,7 +234,7 @@ export default {
   }
 }
 .ul-box {
-  font-size: 16px;
+  font-size: $font-size16;
   font-weight: 400;
   color: #000000;
   ul {

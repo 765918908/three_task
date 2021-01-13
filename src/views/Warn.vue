@@ -84,7 +84,7 @@ export default {
       }
       th {
         height: 35px;
-        font-size: 14px;
+        font-size: $font-size14;
         font-weight: 400;
         line-height: 57px;
         color: #949494;
@@ -95,7 +95,7 @@ export default {
       }
       td {
         height: 16px;
-        font-size: 16px;
+        font-size: $font-size16;
         font-weight: 500;
 
         color: #000000;

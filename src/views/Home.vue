@@ -10,7 +10,7 @@
           <div class="input-search ">
             <div class="flex align-center justify-between">
               <input placeholder="请输入你想查询的内容"
-                     class="font-color-949494 font-size18 aa"
+                     class="font-color-949494 font-size18"
                      type="text">
               <div @click="show"
                    class="font-size20 search-btn  flex font-size20 align-center justify-between">
@@ -67,7 +67,8 @@
               <div class="font-color-000000 font-size24 ">公告栏</div>
               <div class="font-size16 font-color-949494 pointer">更多>></div>
             </div>
-            <div>
+            <div class="scroll-y scroll-box"
+                 style="height:580px;">
               <div class="item pdt15b20 border-bottom">
                 <div class="font-color-000000 mb15 font-size16 "
                      style="font-weight: 500;">市委第四巡视组向闵行区反馈巡视情况
@@ -123,31 +124,17 @@
         <div class="opacity06 text-align-center font-color-000000 mt20 line-height19 mb40">Quick function</div>
         <div>
           <div class="flex justify-between">
-            <div class="item border-box box-shadow w380 h145 align-center flex justify-between pdtb40lr30">
+            <div @click="handleFastChoice(index)"
+                 v-for="(item,index) in fastList"
+                 :key="index"
+                 class="transition pointer item border-box box-shadow w380 h145 align-center flex justify-between pdtb40lr30">
               <img class="icon65"
-                   src="@/assets/images/organization.png"
+                   :src="item.url"
                    alt="">
-              <div class="font-size26 font-color-1B1B1B">组织结构</div>
-              <img class="icon30"
-                   src="@/assets/images/down.png"
-                   alt="">
-            </div>
-            <div class="item border-box box-shadow w380 h145 align-center flex justify-between pdtb40lr30">
-              <img class="icon65"
-                   src="@/assets/images/leadership.png"
-                   alt="">
-              <div class="font-size26 font-color-1B1B1B">领导之窗</div>
-              <img class="icon30"
-                   src="@/assets/images/down.png"
-                   alt="">
-            </div>
-            <div class="item border-box box-shadow w380 h145 align-center flex justify-between pdtb40lr30">
-              <img class="icon65"
-                   src="@/assets/images/coming.png"
-                   alt="">
-              <div class="font-size26 font-color-1B1B1B">敬请期待</div>
-              <img class="icon30"
-                   src="@/assets/images/down.png"
+              <div class="font-size26 font-color-1B1B1B">{{item.name}}</div>
+              <img :class="fastIndex==index?'rotate90':'rotate0'"
+                   class="icon30 transition"
+                   src="@/assets/images/right.png"
                    alt="">
             </div>
           </div>
@@ -155,10 +142,10 @@
           <div class="mt20 box-shadow flex h402">
             <div class="left w230">
               <ul class="ul-box  w100">
-                <li>部门</li>
-                <li>区/县</li>
-                <li>管委会</li>
-                <li>其他机构</li>
+                <li @click="handleDepartChoise(index)"
+                    v-for="(item,index) in departList"
+                    :key="index"
+                    :class="departIndex==index?'active-select-box':''">{{item}}</li>
               </ul>
             </div>
             <div class="right w970 pdl65 border-box pdb50 pdt20 pdr30">
@@ -296,10 +283,28 @@ export default {
   name: 'Home',
   data () {
     return {
+      departIndex: 0,
+      departList: [
+        "部门",
+        "区/县",
+        "管委会",
+        "其他机构"
+      ],
+      fastIndex: 0,
+      fastList: [
+        { url: require('@/assets/images/organization.png'), name: '组织结构' },
+        { url: require('@/assets/images/leadership.png'), name: '领导之窗' },
+        { url: require('@/assets/images/coming.png'), name: '敬请期待' }
+      ]
     }
   },
   methods: {
-
+    handleDepartChoise (index) {
+      this.departIndex = index
+    },
+    handleFastChoice (index) {
+      this.fastIndex = index
+    }
   },
   mounted () {
   },
@@ -311,9 +316,13 @@ export default {
 </script>
 
 <style lang="scss">
-// .aa {
-//   color: $aa;
-// }
+.scroll-box {
+  .item {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
 .focus-picture {
   display: flex;
   align-items: center;
@@ -331,7 +340,7 @@ export default {
   border-radius: 5px;
   input {
     width: 220px;
-    font-size: 14px;
+    font-size: $font-size14;
     color: #949494;
   }
 
@@ -342,7 +351,7 @@ export default {
     background: #e5e5e5;
     border-radius: 5px;
 
-    font-size: 14px;
+    font-size: $font-size14;
     font-weight: 500;
     color: #1b1b1b;
     text-align: center;
@@ -354,13 +363,14 @@ export default {
 .ul-box {
   box-sizing: border-box;
   height: 100%;
+  padding-top: 40px;
 }
 
 .ul-box li {
-  line-height: 70px;
-  height: 70px;
-  font-size: 18px;
+  padding: 25px 0px;
+  font-size: $font-size18;
   color: #1b1b1b;
   text-align: center;
+  cursor: pointer;
 }
 </style>

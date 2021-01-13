@@ -50,7 +50,7 @@ export default {
       justify-content: center;
       width: 47px;
       height: 40px;
-      font-size: 16px;
+      font-size: $font-size16;
       font-weight: 500;
       line-height: 40px;
       color: #000000;
@@ -60,7 +60,7 @@ export default {
     .active {
       background: #c20012;
       border-radius: 5px;
-      font-size: 16px;
+      font-size: $font-size16;
       font-weight: 500;
       color: #ffffff;
     }

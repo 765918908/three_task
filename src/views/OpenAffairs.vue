@@ -4,11 +4,10 @@
       <div class="container">
 
         <Head :currentIndex="1" />
-
       </div>
     </div>
     <div class="container mt30">
-      <div class="font-size16 mb43">当前位置：中国</div>
+      <div class="font-size16 mb43">当前位置：{{this.$route.query.name}}</div>
       <div class="notice flex justify-between">
         <div v-for="(item,index) in 3"
              :key="index"
@@ -17,7 +16,8 @@
             <div class="font-size24">公告栏</div>
             <div class="font-color-949494 font-size16 pointer">更多>></div>
           </div>
-          <div class="ul-box">
+          <div class="ul-box ">
+
             <div class="item"
                  v-for="(item,index) in 5"
                  :key="index">
@@ -27,6 +27,7 @@
                 <div>2020-10-17</div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -132,5 +133,13 @@ export default {
 <style lang="scss">
 .notice-item {
   width: 370px;
+}
+.ul-box {
+  height: unset;
+  .item {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 }
 </style>
