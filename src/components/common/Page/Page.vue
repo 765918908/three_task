@@ -37,7 +37,7 @@ export default {
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 53px;
-  margin-right: 50px;
+  // margin-right: 50px;
   margin-top: 60px;
   .page-box {
     display: flex;

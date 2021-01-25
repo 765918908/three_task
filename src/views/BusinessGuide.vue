@@ -3,11 +3,10 @@
     <div class="head">
       <div class="container">
 
-        <Head :currentIndex="4" />
       </div>
     </div>
     <div class="container mt30">
-      <div class="font-size16 mb43">当前位置：中国</div>
+      <div class="font-size16 mb43">当前位置：{{this.$route.query.name}}</div>
       <div style="padding:49px 0px;margin-bottom:50px;"
            class="flex align-center border-box justify-around box-shadow">
         <div style="margin-right:20px">
@@ -129,12 +128,10 @@
 
 <script>
 
-import Head from "@/components/common/Head/Head"
 import Foot from "@/components/common/Foot/Foot"
 export default {
   name: 'BusinessGuide',
   components: {
-    Head,
     Foot
   }
 }
@@ -206,7 +203,7 @@ export default {
     .title {
       font-size: $font-size18;
       color: #000000;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     .date {
       font-size: $font-size18;
@@ -245,6 +242,7 @@ export default {
       width: 150px;
       margin-bottom: 25px;
       position: relative;
+      padding: 0px;
       padding-left: 15px;
       box-sizing: border-box;
       &::before {

@@ -3,12 +3,10 @@
     <div class="head">
       <div class="container">
 
-        <Head :currentIndex="2" />
-
       </div>
     </div>
     <div class="container mt30">
-      <div class="font-size16 mb43">当前位置：中国</div>
+      <div class="font-size16 mb43">当前位置：{{this.$route.query.name}}</div>
       <div class="notice flex justify-between">
         <div v-for="(item,index) in 3"
              :key="index"
@@ -17,7 +15,9 @@
             <div class="font-size24">公告栏</div>
             <div class="font-color-949494 font-size16 pointer">更多>></div>
           </div>
-          <div class="ul-box">
+          <div class="ul-box scroll-y"
+               style="height:510px;">
+
             <div class="item"
                  v-for="(item,index) in 5"
                  :key="index">
@@ -27,6 +27,7 @@
                 <div>2020-10-17</div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -36,10 +37,11 @@
       <div class="flex box-shadow">
         <div class="left w440 pd-l-43 pd-tb-60 border-box">
           <div class="red-title mb30">公开指标</div>
-          <div v-for="(item,index) in 4"
+          <div @click="handleTatgetChoice(index)"
+               v-for="(item,index) in 4"
                :key="index"
-               class=" item mb50 font-color-1B1B1B">
-            <div class="active-select-box">
+               class=" item mb50 font-color-1B1B1B pointer">
+            <div :class="targetIndex==index?'active-select-box':''">
               党组织任期工作目标、阶段性工作部署、重点
               工作任务及落实情况
             </div>
@@ -65,38 +67,27 @@
               </div>
             </div>
           </div>
-          <div class="page">
-            <div class="page-more">
-              <img src="@/assets/images/before_page.png"
-                   alt="">
-            </div>
-
-            <div class="page-box">
-              <div class="page-item active">1</div>
-              <div class="page-item">2</div>
-              <div class="page-item">3</div>
-              <div class="page-item">4</div>
-            </div>
-
-            <div class="page-more">
-              <img src="@/assets/images/next_page.png"
-                   alt="">
-            </div>
+          <div style="width: 100%;text-align:center;">
+            <Page />
 
           </div>
+
         </div>
       </div>
     </div>
 
     <div class="container mt80">
       <div class="flex box-shadow">
-        <div class="left w440 pd-43-60 border-box">
+        <div class="left w440 pd-l-43 pd-tb-60 border-box">
           <div class="red-title mb30">公开指标</div>
-          <div v-for="(item,index) in 4"
+          <div @click="handleTatgetChoice(index)"
+               v-for="(item,index) in 4"
                :key="index"
-               class="item mb50 font-color-1B1B1B">
-            党组织任期工作目标、阶段性工作部署、重点
-            工作任务及落实情况
+               class=" item mb50 font-color-1B1B1B pointer">
+            <div :class="targetIndex==index?'active-select-box':''">
+              党组织任期工作目标、阶段性工作部署、重点
+              工作任务及落实情况
+            </div>
           </div>
         </div>
         <div class="right w760 border-box pd-43-60 ">
@@ -119,25 +110,11 @@
               </div>
             </div>
           </div>
-          <div class="page">
-            <div class="page-more">
-              <img src="@/assets/images/before_page.png"
-                   alt="">
-            </div>
-
-            <div class="page-box">
-              <div class="page-item active">1</div>
-              <div class="page-item">2</div>
-              <div class="page-item">3</div>
-              <div class="page-item">4</div>
-            </div>
-
-            <div class="page-more">
-              <img src="@/assets/images/next_page.png"
-                   alt="">
-            </div>
+          <div style="width: 100%;text-align:center;">
+            <Page />
 
           </div>
+
         </div>
       </div>
     </div>
@@ -148,13 +125,23 @@
 
 <script>
 
-import Head from "../components/common/Head/Head"
-import Foot from "../components/common/Foot/Foot"
+import Foot from "@/components/common/Foot/Foot"
+import Page from "@/components/common/Page/Page"
 export default {
   name: 'Home',
+  data () {
+    return {
+      targetIndex: 0,
+    }
+  },
+  methods: {
+    handleTatgetChoice (index) {
+      this.targetIndex = index
+    }
+  },
   components: {
-    Head,
-    Foot
+    Foot,
+    Page
   }
 }
 </script>
@@ -162,5 +149,13 @@ export default {
 <style lang="scss">
 .notice-item {
   width: 370px;
+}
+.ul-box {
+  height: unset;
+  .item {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 }
 </style>

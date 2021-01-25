@@ -3,11 +3,10 @@
     <div class="head">
       <div class="container">
 
-        <Head :currentIndex="5" />
       </div>
     </div>
     <div class="container mt30">
-      <div class="font-size16 mb43">当前位置：中国</div>
+      <div class="font-size16 mb43">当前位置：{{this.$route.query.name}}</div>
       <div class="list-box box-shadow">
         <div class="flex justify-between list-title align-center">
           <div class="red-title">出生等级</div>
@@ -51,13 +50,11 @@
 
 <script>
 
-import Head from "@/components/common/Head/Head"
 import Foot from "@/components/common/Foot/Foot"
 import Page from "@/components/common/Page/Page"
 export default {
   name: 'BusinessGuide',
   components: {
-    Head,
     Foot,
     Page
   }

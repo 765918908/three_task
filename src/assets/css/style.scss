@@ -134,7 +134,7 @@ input:focus{ border:none;}
   -webkit-box-shadow: none;
 }
 .scroll-y{
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .w1200{
   width: $max-width;

@@ -4,16 +4,13 @@
     <div class="head">
       <div class="container">
 
-        <Head :currentIndex="0" />
-
         <div class="search-wrapp">
           <div class="input-search ">
             <div class="flex align-center justify-between">
               <input placeholder="请输入你想查询的内容"
                      class="font-color-949494 font-size18"
                      type="text">
-              <div @click="show"
-                   class="font-size20 search-btn  flex font-size20 align-center justify-between">
+              <div class="font-size20 search-btn  flex font-size20 align-center justify-between">
                 搜索
                 <img src="@/assets/images/arrow-right.png"
                      alt="">
@@ -138,113 +135,121 @@
                    alt="">
             </div>
           </div>
-
-          <div class="mt20 box-shadow flex h402">
-            <div class="left w230">
-              <ul class="ul-box  w100">
-                <li @click="handleDepartChoise(index)"
-                    v-for="(item,index) in departList"
-                    :key="index"
-                    :class="departIndex==index?'active-select-box':''">{{item}}</li>
-              </ul>
+          <template v-if="fastIndex==1">
+            <div class="mt20 box-shadow flex justify-center align-center"
+                 style="height:265px;min-width:1200px;">
+              <BoxSwiper />
             </div>
-            <div class="right w970 pdl65 border-box pdb50 pdt20 pdr30">
-              <div class="flex justify-between mb27">
-                <div class="flex h40 align-center align-center">
-                  <img class="icon20 mr5"
-                       src="@/assets/images/sign.png"
-                       alt="">
-                  <div class="font-size18">佛山市</div>
+          </template>
+          <template v-if="fastIndex==0">
+            <div class="mt20 box-shadow flex h402">
+              <div class="left w230">
+                <ul class="ul-box  w100">
+                  <li @click="handleDepartChoise(index)"
+                      v-for="(item,index) in departList"
+                      :key="index"
+                      :class="departIndex==index?'active-select-box':''">{{item}}</li>
+                </ul>
+              </div>
+              <div class="right w970 pdl65 border-box pdb50 pdt20 pdr30">
+                <div class="flex justify-between mb27">
+                  <div class="flex h40 align-center align-center">
+                    <img class="icon20 mr5"
+                         src="@/assets/images/sign.png"
+                         alt="">
+                    <div class="font-size18">佛山市</div>
+                  </div>
+                  <div class="search-input flex">
+                    <input type="text"
+                           placeholder="例如：xx部门">
+                    <div class="search-buttom">查找</div>
+                  </div>
                 </div>
-                <div class="search-input flex">
-                  <input type="text"
-                         placeholder="例如：xx部门">
-                  <div class="search-buttom">查找</div>
+
+                <div class="flex justify-between">
+                  <div class="item">
+                    <ul>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                    </ul>
+                  </div>
+                  <div class="item">
+                    <ul>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                    </ul>
+                  </div>
+                  <div class="item">
+                    <ul>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                    </ul>
+                  </div>
+                  <div class="item">
+                    <ul>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                    </ul>
+                  </div>
+                  <div class="item">
+                    <ul>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                    </ul>
+                  </div>
+                  <div class="item">
+                    <ul>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                      <li>市发展改革委</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
-              <div class="flex justify-between">
-                <div class="item">
-                  <ul>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                  </ul>
-                </div>
-                <div class="item">
-                  <ul>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                  </ul>
-                </div>
-                <div class="item">
-                  <ul>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                  </ul>
-                </div>
-                <div class="item">
-                  <ul>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                  </ul>
-                </div>
-                <div class="item">
-                  <ul>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                  </ul>
-                </div>
-                <div class="item">
-                  <ul>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                    <li>市发展改革委</li>
-                  </ul>
-                </div>
-              </div>
             </div>
-          </div>
+          </template>
+
         </div>
       </div>
 
@@ -276,8 +281,8 @@
 
 <script>
 
-import Head from "@/components/common/Head/Head"
 import Foot from "@/components/common/Foot/Foot"
+import BoxSwiper from "@/components/common/BoxSwiper/BoxSwiper"
 
 export default {
   name: 'Home',
@@ -309,8 +314,8 @@ export default {
   mounted () {
   },
   components: {
-    Head,
-    Foot
+    Foot,
+    BoxSwiper
   }
 }
 </script>
